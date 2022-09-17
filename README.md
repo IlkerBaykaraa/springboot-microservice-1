@@ -1,1 +1,1 @@
-
+bunu şimdi ekledim
