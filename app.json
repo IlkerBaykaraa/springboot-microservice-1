@@ -1,0 +1,8 @@
+{
+  "name": "product-order",
+  "buildpacks": [
+    {
+      "url": "heroku/gradle"
+    }
+  ]
+}
