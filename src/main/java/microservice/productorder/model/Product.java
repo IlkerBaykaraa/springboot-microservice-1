@@ -10,16 +10,59 @@ import java.time.LocalDateTime;
 @Data
 public class Product {
 
-    @Id
+	private Long id;
+	private String name;
+	private LocalDateTime createTime;
+	private double price;
+	
+	public Product(Long id, String name, LocalDateTime createTime) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.createTime = createTime;
+	}
+	
+	public Product() {
+		
+	}
+	
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	public Long getId() {
+		return id;
+	}
+	
+	@Column(name = "price",nullable = false)
+	public double getPrice() {
+		return price;
+	}
 
-    @Column(name = "name", length = 100, nullable = false)
-    private String name;
+	public void setPrice(double price) {
+		this.price = price;
+	}
 
-    @Column(name = "price",nullable = false)
-    private double price;
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	@Column(name = "name", length = 100, nullable = false)
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Column(name = "creat_time",nullable = false)
+	public LocalDateTime getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(LocalDateTime createTime) {
+		this.createTime = createTime;
+	}
+	
+	
+    
 
-    @Column(name = "creat_time",nullable = false)
-    private LocalDateTime createTime;
+	
+   
 }
